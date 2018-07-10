@@ -10,7 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    $publicaciones = App\Publicacion::all();
+
+    return view('welcome', compact('publicaciones'));
 });
