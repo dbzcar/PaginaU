@@ -7,5 +7,9 @@ use App\Publicacion;
 
 class PagesController extends Controller
 {
-
+    public function home()
+    {
+        $publicaciones = Publicacion::all();
+        return view('welcome', compact('publicaciones'));
+    }
 }
